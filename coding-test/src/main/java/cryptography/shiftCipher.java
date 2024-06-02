@@ -11,7 +11,10 @@ package cryptography;
  * - 수정자: jhbaek
  * - 수정내용: 최초생성
  */
-
 public class shiftCipher {
-
+    public void entryFunction(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("암호화 할 문장을 적어주세요.");
+        String userInput = sc.nextLine();
+    }
 }
