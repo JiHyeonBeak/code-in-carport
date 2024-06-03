@@ -17,4 +17,8 @@ public class shiftCipher {
         System.out.println("암호화 할 문장을 적어주세요.");
         String userInput = sc.nextLine();
     }
+    public void shiftCipher(String encodingWord) {
+        word = Character.toUpperCase(encodingWord)
+        System.out.println(int(word))
+    }
 }
