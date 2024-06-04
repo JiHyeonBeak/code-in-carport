@@ -7,5 +7,6 @@ public class Main {
 //        reverseString.entryFunction();
         shiftCipher shiftCipher = new shiftCipher();
         shiftCipher.entryFunction();
+
     }
 }
