@@ -14,13 +14,28 @@ import java.util.Scanner;
  * - 수정내용: 최초생성
  */
 public class shiftCipher {
+    Scanner sc = new Scanner(System.in);
+    // 엔트리 함수
+    public void entryFunction(){
+        System.out.println("기능을 선택하세요.\n1.암호화\n2.복호화\n");
+        int asNum = sc.nextInt();
+        if(0 < asNum < 3) {
+            inputFunction(asNum);
+        } else {
+            System.out.println("1번과 2번중에 선택해주세요.");
+            entryFunction();
+        }
+    }
 
     // 입력 함수
-    public void entryFunction(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("암호화 할 문장을 적어주세요.");
-        String userInput = sc.nextLine();
-        shiftCipher(userInput);
+    public void inputFunction(int chFlag) {
+        System.out.println("암복호할 문장을 입력하세요.\n");
+        String word  = sc.nextLine();
+        switch (chFlag){
+            case 1:
+                shiftCipher(word);;
+        }
+
     }
 
     // 암호화 함수
