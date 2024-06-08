@@ -19,7 +19,7 @@ public class shiftCipher {
     public void entryFunction(){
         System.out.println("기능을 선택하세요.\n1.암호화\n2.복호화\n");
         int asNum = sc.nextInt();
-        if(0 < asNum < 3) {
+        if(asNum < 3 || asNum > 0) {
             inputFunction(asNum);
         } else {
             System.out.println("1번과 2번중에 선택해주세요.");
