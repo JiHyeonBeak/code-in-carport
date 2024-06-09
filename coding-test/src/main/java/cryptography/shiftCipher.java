@@ -1,5 +1,6 @@
 package cryptography;
 import java.nio.charset.StandardCharsets;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -17,12 +18,19 @@ public class shiftCipher {
     Scanner sc = new Scanner(System.in);
     // 엔트리 함수
     public void entryFunction(){
-        System.out.println("기능을 선택하세요.\n1.암호화\n2.복호화\n");
-        int asNum = sc.nextInt();
-        if(asNum < 3 || asNum > 0) {
-            inputFunction(asNum);
-        } else {
-            System.out.println("1번과 2번중에 선택해주세요.");
+        Scanner sc = new Scanner(System.in);
+        // nextInt로 받기때문에, 숫자가 아닌 문자열을 받을 시 try-catch로 예외처리 가능.
+        try {
+            System.out.println("기능을 선택하세요.\n1.암호화\n2.복호화");
+            int asNum = sc.nextInt();
+            if(asNum < 3 && asNum > 0) {
+                inputFunction(asNum);
+            } else {
+                System.out.println("1번과 2번중에 선택해주세요.");
+                entryFunction();
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("숫자를 입력해주세요.");
             entryFunction();
         }
     }
@@ -31,9 +39,14 @@ public class shiftCipher {
     public void inputFunction(int chFlag) {
         System.out.println("암복호할 문장을 입력하세요.\n");
         String word  = sc.nextLine();
-        switch (chFlag){
+        switch(chFlag){
             case 1:
-                shiftCipher(word);;
+                shiftCipher(word);
+                break;
+            case 2:
+                break;
+            default:
+                break;
         }
 
     }
