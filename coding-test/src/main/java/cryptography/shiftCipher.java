@@ -44,10 +44,17 @@ public class shiftCipher {
                 shiftCipher(word);
                 break;
             case 2:
+                descramblingFunction(word);
                 break;
             default:
+                entryFunction();
                 break;
         }
+
+    }
+
+    // 복호화 함수
+    public void descramblingFunction(String decodingWord) {
 
     }
 
