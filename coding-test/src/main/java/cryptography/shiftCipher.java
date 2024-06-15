@@ -30,7 +30,7 @@ public class shiftCipher {
                 entryFunction();
             }
         } catch (InputMismatchException e) {
-            System.out.println("숫자를 입력해주세요.");
+            System.out.println("숫자를 입력해주세요.\n"+e);
             entryFunction();
         }
     }
