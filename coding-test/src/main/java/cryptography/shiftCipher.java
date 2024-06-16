@@ -39,6 +39,7 @@ public class shiftCipher {
     public void inputFunction(int chFlag) {
         System.out.println("암복호할 문장을 입력하세요.\n");
         String word  = sc.nextLine();
+        // entry에서 입력받은 chFlag값으로 해당 기능을 배분.
         switch(chFlag){
             case 1:
                 shiftCipher(word);
